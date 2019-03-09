@@ -1,4 +1,4 @@
-"
+"""
     Algorithm that chooses where the user to go to get his food.
 
     Input: Quadrant and Food Option seleted
@@ -23,12 +23,26 @@
     3) if (closestLine-shortestLine)<3 go to closestLine else go to shortestLine
     
 
-"
-class Vendors:
+"""
+arline=[2,3,4,6,7,8,9.12]
+arname = ["hotdog1","hotdog2","hotdog3","hotdog4","burger1","burger2","burger3","burger4"]
+arTypeOfFood = [1,1,1,1,2,2,2,2]
+
+class Vendor:
     def __init__(self, line, name, typeOfFood):
         self.line = int(line)
         self.name = name
         self.typeOfFood = typeOfFood
         self.time = 0
+
+
+arVendors = []
+for (i=0;i<8;i++):
+    arVendors[i]=Vendor(arline[i], arname[i], arTypeOfFood[i])
+
+
+
+
+
 
 
