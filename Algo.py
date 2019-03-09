@@ -24,3 +24,11 @@
     
 
 "
+class Vendors:
+    def __init__(self, line, name, typeOfFood):
+        self.line = int(line)
+        self.name = name
+        self.typeOfFood = typeOfFood
+        self.time = 0
+
+
