@@ -50,14 +50,16 @@ with open('CSVs/realtimedata_-_Sheet1-2.csv', newline='') as csvfile:
     for row in currline:
         arline.append(row[1])
 
-arline = [] # array for current line at vendor
-with open('CSVs/realtimedata_-_Sheet1-2.csv', newline='') as csvfile:
-    currline = csv.reader(csvfile, delimiter=',', quotechar='|')
-    for row in currline:
-        arline.append(row[1])
+artime = [] # array for time per person based on the inning
+with open('CSVs/historical_Data_-_Sheet1.csv', newline='') as csvfile:
+    time = csv.reader(csvfile, delimiter=',', quotechar='|')
+    for row in time:
+        artime.append(row[1])
 
 artypeOfFood.remove('type of food')
 arname.remove("vendor's name")
+artime.remove("1H")
+
 
 
 
