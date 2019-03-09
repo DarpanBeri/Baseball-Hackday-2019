@@ -28,6 +28,7 @@ import csv
 """arline=[2,3,4,6,7,8,9.12]
 arname = ["hotdog1","hotdog2","hotdog3","hotdog4","burger1","burger2","burger3","burger4"]
 artypeOfFood = [1,1,1,1,2,2,2,2]"""
+inputTypeOfFood = 2;
 
 class Vendor:
     def __init__(self, line, name, typeOfFood, perperson):
@@ -78,4 +79,30 @@ for i in range(8):
 
 for i in range(8):
     arVendors[i].time = arVendors[i].line * arVendors[i].perperson
+
+smallest = arVendors[0];
+for i in range(8):
+    if (arVendors[i].time<smallest.time and arVendors[i].typeOfFood==inputTypeOfFood):
+        smallest = arVendors[i]
+
+arVendors1 = []
+arVendors2 = []
+for i in range(8):
+    if (arVendors[i].typeOfFood==1):
+        arVendors1.append(arVendors[i])
+for i in range(8):
+    if (arVendors[i].typeOfFood==2):
+        arVendors2.append(arVendors[i])
+
+if inputTypeOfFood==1 :
+    smallest = arVendors1[0];
+    for i in range(4):
+        if (arVendors[i].time<smallest.time):
+            smallest = arVendors[i]
+
+if inputTypeOfFood==2 :
+    smallest = arVendors2[0];
+    for i in range(4):
+        if (arVendors[i].time<smallest.time):
+            smallest = arVendors[i]
 
