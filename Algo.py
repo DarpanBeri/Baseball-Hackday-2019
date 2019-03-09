@@ -29,12 +29,12 @@ arname = ["hotdog1","hotdog2","hotdog3","hotdog4","burger1","burger2","burger3",
 arTypeOfFood = [1,1,1,1,2,2,2,2]"""
 
 class Vendor:
-    def __init__(self, line, name, typeOfFood, time):
+    def __init__(self, line, name, typeOfFood, perperson):
         self.line = int(line)
         self.name = name
         self.typeOfFood = typeOfFood
         self.time = 0
-        self.perperson = time
+        self.perperson = perperson
 
 
 # Take in .csv file and make Arrays
@@ -68,6 +68,11 @@ artime.remove("1H")
 arVendors = []
 for i in range(8):
     arVendors.append(Vendor(arline[i], arname[i], arTypeOfFood[i], artime[i]))
+
+for i in range(8):
+    arVendors[i].time = arVendors[i].line * arVendors[i].perperson
+
+
     
 
 
