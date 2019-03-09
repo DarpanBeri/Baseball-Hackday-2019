@@ -39,12 +39,12 @@ class Vendor:
 
 
 # Take in .csv file and make Arrays
-artypeOfFood = [] # array for type of food
+typeOfFood = [] # array for type of food
 arname = []
 with open('CSVs/vendors.csv', newline='') as csvfile:
     vendors = csv.reader(csvfile, delimiter=',', quotechar='|')
     for row in vendors:
-        artypeOfFood.append(row[1])
+        typeOfFood.append(row[1])
         arname.append(row[0])
 
 arline = [] # array for current line at vendor
@@ -63,6 +63,12 @@ artypeOfFood.remove('type of food')
 arname.remove("vendor's name")
 artime.remove("1H")
 
+artypeOfFood = []
+for i in range(8):
+    if(typeOfFood[i] = 'hot dogs'):
+        artypeOfFood.append(1)
+    if(typeOfFood[i] = 'burgers'):
+        artypeOfFood.append(2)
 
 
 
