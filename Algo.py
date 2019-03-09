@@ -18,10 +18,10 @@
         the stuff discussed above
 
 
-    1) Based on food type find the shortestLine 
+    1) Based on food type find the shortestLine
     2) Based on food type fin the closestLine
     3) if (closestLine-shortestLine)<3 go to closestLine else go to shortestLine
-    
+
 
 """
 arline=[2,3,4,6,7,8,9.12]
@@ -35,14 +35,31 @@ class Vendor:
         self.typeOfFood = typeOfFood
         self.time = 0
 
+# Take in .csv file and make Arrays
+artypeOfFood = [] # array for type of food
+arname = []
+with open('CSVs/vendors.csv', newline='') as csvfile:
+    vendors = csv.reader(csvfile, delimiter=',', quotechar='|')
+    for row in vendors:
+        artypeOfFood.append(row[1])
+        arname.append(row[0])
+
+arline = [] # array for current line at vendor
+with open('CSVs/realtimedata_-_Sheet1-2.csv', newline='') as csvfile:
+    currline = csv.reader(csvfile, delimiter=',', quotechar='|')
+    for row in currline:
+        arline.append(row[1])
+
+arline = [] # array for current line at vendor
+with open('CSVs/realtimedata_-_Sheet1-2.csv', newline='') as csvfile:
+    currline = csv.reader(csvfile, delimiter=',', quotechar='|')
+    for row in currline:
+        arline.append(row[1])
+
+artypeOfFood.remove('type of food')
+arname.remove("vendor's name")
+
 
 arVendors = []
 for (i=0;i<8;i++):
     arVendors[i]=Vendor(arline[i], arname[i], arTypeOfFood[i])
-
-
-
-
-
-
-
