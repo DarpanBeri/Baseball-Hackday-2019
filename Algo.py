@@ -60,6 +60,11 @@ artypeOfFood.remove('type of food')
 arname.remove("vendor's name")
 
 
+
 arVendors = []
-for (i=0;i<8;i++):
-    arVendors[i]=Vendor(arline[i], arname[i], arTypeOfFood[i])
+for i in range(8):
+    arVendors.append(Vendor(arline[i], arname[i], arTypeOfFood[i]))
+    
+
+
+
