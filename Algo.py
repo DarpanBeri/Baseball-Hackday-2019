@@ -24,9 +24,9 @@
 
 
 """
-arline=[2,3,4,6,7,8,9.12]
+"""arline=[2,3,4,6,7,8,9.12]
 arname = ["hotdog1","hotdog2","hotdog3","hotdog4","burger1","burger2","burger3","burger4"]
-arTypeOfFood = [1,1,1,1,2,2,2,2]
+arTypeOfFood = [1,1,1,1,2,2,2,2]"""
 
 class Vendor:
     def __init__(self, line, name, typeOfFood):
