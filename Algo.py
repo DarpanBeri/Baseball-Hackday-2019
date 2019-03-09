@@ -68,7 +68,7 @@ artime.remove("1H")
 
 arVendors = []
 for i in range(8):
-    arVendors.append(Vendor(arline[i], arname[i], arTypeOfFood[i], artime[i]))
+    arVendors.append(Vendor(arline[i], arname[i], artypeOfFood[i], artime[i]))
 
 for i in range(8):
     arVendors[i].time = arVendors[i].line * arVendors[i].perperson
