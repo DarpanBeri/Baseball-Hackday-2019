@@ -27,7 +27,7 @@ import csv
 """
 """arline=[2,3,4,6,7,8,9.12]
 arname = ["hotdog1","hotdog2","hotdog3","hotdog4","burger1","burger2","burger3","burger4"]
-arTypeOfFood = [1,1,1,1,2,2,2,2]"""
+artypeOfFood = [1,1,1,1,2,2,2,2]"""
 
 class Vendor:
     def __init__(self, line, name, typeOfFood, perperson):
@@ -59,15 +59,15 @@ with open('CSVs/historical_Data_-_Sheet1.csv', newline='') as csvfile:
     for row in time:
         artime.append(row[1])
 
-artypeOfFood.remove('type of food')
+typeOfFood.remove('type of food')
 arname.remove("vendor's name")
 artime.remove("1H")
 
 artypeOfFood = []
 for i in range(8):
-    if(typeOfFood[i] = 'hot dogs'):
+    if(typeOfFood[i] == 'hot dogs'):
         artypeOfFood.append(1)
-    if(typeOfFood[i] = 'burgers'):
+    if(typeOfFood[i] == 'burgers'):
         artypeOfFood.append(2)
 
 
@@ -78,9 +78,4 @@ for i in range(8):
 
 for i in range(8):
     arVendors[i].time = arVendors[i].line * arVendors[i].perperson
-
-
-    
-
-
 
