@@ -35,7 +35,7 @@ class Vendor:
         self.name = name
         self.typeOfFood = typeOfFood
         self.time = 0
-        self.perperson = perperson
+        self.perperson = int(perperson)
 
 
 # Take in .csv file and make Arrays
